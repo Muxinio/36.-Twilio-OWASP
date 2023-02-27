@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/style/style.css">
+    <title>User Profile</title>
+</head>
+<body>
+    <ul>
+        <li><a href="/">Cerrar Sesion</a></li> 
+        <button class="btn-primary" id="dark-mode-button">Modo Nocturno</button>
+    </div>
+</ul>
+    <div class="profile-container">
+        <h1>Perfil del Usuario</h1>
+        <div class="avatar-container">
+            <img src="<%= user.avatar %>" alt="User Avatar">
+        </div>
+        <div class="profile-info">
+            <p>Usuario: <%= user.name %> </p>
+            <p>Email: <%= user.email %> </p>
+            <p>Edad: <%= user.age %> </p>
+            <p>Direccion: <%= user.address %> </p>
+            <p>Telefono: <%= user.phone %> </p>
+        </div>
+    </div>
+    <div class="cart-container">
+        <h2>Mi carrito</h2>
+        <div class="cart-info">
+            <img src="https://www.cottonclub.com.ar/pub/media/catalog/product/cache/65e2670acbf1788249a95924f3789a80/7/0/705_negro_8_1_1_10.jpg">
+            
+            <div class="cart">
+                <p>20x Remera de Algodon negra</p>
+                <p>Envio Gratis</p>
+            <form action="/compra" method="post">
+                <input class="btn-primary" type="submit" value="Comprar Ahora" />
+            </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        const body = document.querySelector('body');
+     const darkModeButton = document.querySelector('#dark-mode-button');
+     
+     darkModeButton.addEventListener('click', () => {
+       body.classList.toggle('dark-mode');
+     });
+     
+       </script>
+</body>
+</html>

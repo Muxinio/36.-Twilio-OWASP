@@ -10,7 +10,7 @@ const User = require('./models/user');
 const path = require('path')
 const bcrypt = require('bcryptjs');
 const nodemailer = require('nodemailer');
-const client = require('twilio')("TWILIO_AUTH_TOKEN","7c68b76b0fee4e796c3e733882d4b331");
+const client = require('twilio')("TWILIO_AUTH_TOKEN","TWILIO_ACCOUNT_SID");
 require('dotenv').config()
 
 // Configurar la conexión a la base de datos MongoDB
